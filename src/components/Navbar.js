@@ -223,7 +223,7 @@ function Navbar() {
             >
               <li>
                 <a
-                  href="https://hr.ems.enkonix.in"
+                  href="https://ems.admin.enkonix.in/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setShowUserDropdown(false)}
@@ -233,7 +233,7 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  href="https://ems.enkonix.in"
+                  href="https://ems.employee.enkonix.in/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setShowUserDropdown(false)}
