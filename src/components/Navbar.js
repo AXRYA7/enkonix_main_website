@@ -5,7 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 
 const services = [
-  { label: "AI Service", path: "/services/ai-service" },
+  { label: "AI Services", path: "/services/ai-service" },
   {
     label: "Application Development",
     path: "/services/application-development",
@@ -103,6 +103,23 @@ function Navbar() {
     };
   }, [showUserDropdown]);
 
+  // Close services dropdown when clicking outside
+  React.useEffect(() => {
+    function handleClickOutside(event) {
+      if (!event.target.closest(".services-dropdown")) {
+        setShowDropdown(false);
+      }
+    }
+    if (showDropdown) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showDropdown]);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -135,7 +152,7 @@ function Navbar() {
             About Us
           </NavLink>
           <div
-            className="navbar-dropdown"
+            className="navbar-dropdown services-dropdown"
             onMouseEnter={handleDropdownMouseEnter}
             onMouseLeave={handleDropdownMouseLeave}
           >

@@ -147,7 +147,7 @@ export default function AIService() {
         {/* Benefits Section */}
         <section className="service-section black-theme">
           <div className="container">
-            <h2>AI Service: Overview & Scope</h2>
+            <h2>AI Services: Overview & Scope</h2>
             <p>
               We deliver AI-powered solutions for every industry — from
               intelligent automation to advanced analytics. Our team helps you
